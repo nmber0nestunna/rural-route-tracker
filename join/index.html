@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Test Rural Route Tracker</title>
+<meta name="description" content="Three steps to join the Rural Route Tracker test on Android.">
+<style>
+  :root { --bg: #f4f6fa; --card: #ffffff; --text: #1b2330; --muted: #5d6778; --accent: #1f4e9c; --on-accent: #ffffff; --border: #d5dbe6; --note: #fff7e0; --note-border: #e8d38a; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #10151d; --card: #1a212c; --text: #e8ecf3; --muted: #9aa6b8; --accent: #7fb0ff; --on-accent: #0d1a2e; --border: #2c3646; --note: #2a2514; --note-border: #5c4f22; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 560px; margin: 0 auto; padding: 28px 16px 56px; }
+  h1 { font-size: 1.6rem; line-height: 1.25; margin: 0 0 6px; }
+  p { margin: 0 0 10px; }
+  .muted { color: var(--muted); }
+  .note { background: var(--note); border: 1px solid var(--note-border); border-radius: 12px; padding: 12px 14px; margin: 18px 0; }
+  ol { list-style: none; padding: 0; margin: 0; counter-reset: step; }
+  li { counter-increment: step; background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 18px 18px 18px 64px; margin: 0 0 14px; position: relative; }
+  li::before { content: counter(step); position: absolute; left: 18px; top: 18px; width: 32px; height: 32px; border-radius: 50%; background: var(--accent); color: var(--on-accent); font-weight: 700; display: grid; place-items: center; }
+  h2 { font-size: 1.1rem; margin: 3px 0 6px; }
+  .btn { display: block; text-align: center; background: var(--accent); color: var(--on-accent); text-decoration: none; font-weight: 600; padding: 13px 16px; border-radius: 12px; margin: 12px 0 4px; }
+  .btn:focus-visible { outline: 3px solid var(--text); outline-offset: 2px; }
+  a { color: var(--accent); }
+  footer { margin-top: 28px; font-size: .9rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Help test Rural Route Tracker</h1>
+  <p class="muted">An app for rural carriers to log daily counts and see whether the route will hold its Evaluated Hours. Android only for now. Takes about 2 minutes.</p>
+
+  <div class="note">
+    <strong>Use the same Google account as your phone’s Play Store</strong> in every step. If you’re asked to sign in, pick that account. Using a different one is the main reason the app doesn’t show up.
+  </div>
+
+  <ol>
+    <li>
+      <h2>Join the tester group</h2>
+      <p>Tap <strong>Join group</strong> on the page that opens. Other members can’t see your email.</p>
+      <a class="btn" href="https://groups.google.com/g/rrecs-tracker-testers">Open the tester group</a>
+    </li>
+    <li>
+      <h2>Become a tester</h2>
+      <p>Tap <strong>Become a tester</strong>. This only works after step 1.</p>
+      <a class="btn" href="https://play.google.com/apps/testing/com.rrecstracker.app">Open the test sign-up</a>
+    </li>
+    <li>
+      <h2>Install the app</h2>
+      <p>Install it from the Play Store. If it isn’t there yet, wait a few minutes after step 2 and try again.</p>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.rrecstracker.app">Open in Play Store</a>
+    </li>
+  </ol>
+
+  <div class="note">
+    <strong>Please stay in the test for at least 14 days.</strong> Google requires that before the app can be released to everyone. Leaving it installed and logging a few days is the biggest help.
+  </div>
+
+  <p>Create your own account in the app; don’t share one. It’s fine to start with made-up numbers for a day or two. Problems or ideas: tap <strong>Send feedback</strong> in Settings, or email <a href="mailto:rural.route.tracker@gmail.com">rural.route.tracker@gmail.com</a>.</p>
+
+  <footer class="muted">
+    <p>Rural Route Tracker is not affiliated with or endorsed by the United States Postal Service or the National Rural Letter Carriers’ Association (NRLCA). <a href="../">Privacy policy</a></p>
+  </footer>
+</main>
+</body>
+</html>
