@@ -30,13 +30,13 @@
 <main>
 <article>
   <h1>Rural Route Tracker Privacy Policy</h1>
-  <p class="muted">Effective November 1, 2026</p>
+  <p class="muted">Effective November 24, 2026</p>
 
   <p>Rural Route Tracker (“the app”, “we”, “us”) helps rural mail carriers log their daily route numbers and estimate how their route compares with its evaluation. This policy explains what information the app collects, how it is used, and the choices you have.</p>
 
   <h2>The short version</h2>
   <ul>
-    <li>We collect only what the app needs to work: your email, your password (stored securely by our backend), and the route numbers you enter.</li>
+    <li>We collect only what the app needs to work: your email, your password (stored securely by our backend), the route numbers you enter, and a crash report if the app hits an error. If you use Scan my forms, the pages you scan are sent to be read and aren’t kept by us.</li>
     <li>We do not sell your information, show ads, or use analytics or tracking tools.</li>
     <li>You can delete your account and all of its data at any time from inside the app.</li>
   </ul>
@@ -45,18 +45,24 @@
   <table>
     <tr><th>Information</th><th>Why</th><th>Where it is kept</th></tr>
     <tr><td>Email address and password</td><td>To create your account, sign you in, and send sign-up and password-reset codes</td><td>Our backend (Supabase). Passwords are stored only as secure hashes.</td></tr>
-    <tr><td>Route details from your evaluation forms (for example route number, route type, evaluated hours, box counts, daily averages, effective date)</td><td>To calculate your averages and forecasts</td><td>On your device and in your account on our backend</td></tr>
-    <tr><td>Daily logs you enter (parcels, door trips, pickups, coverages, minutes and similar counts)</td><td>To calculate your averages, forecasts and monthly summaries</td><td>On your device and in your account on our backend</td></tr>
+    <tr><td>Route details from your evaluation forms (for example route number, route type, evaluated hours, box counts, daily averages, effective date), and your mail survey totals</td><td>To calculate your averages and forecasts</td><td>On your device and in your account on our backend</td></tr>
+    <tr><td>Daily logs you enter (parcels, door trips, pickups, coverages, minutes and similar counts), with the time each day was last saved</td><td>To calculate your averages, forecasts and monthly summaries</td><td>On your device and in your account on our backend</td></tr>
+    <tr><td>The dates of days you delete, and when you deleted them</td><td>So your other devices delete those days too, and an older change from another device can’t bring them back</td><td>In your account on our backend, until you delete your account</td></tr>
+    <tr><td>When you sent form scans in the last day (the time and number of pages only, never the scans themselves)</td><td>To limit scans to 10 a day per account</td><td>In your account on our backend for two days, or until you delete your account</td></tr>
     <tr><td>App settings (what you track, rates, residents/business box split)</td><td>To apply your choices on every device you sign in on</td><td>On your device and in your account on our backend</td></tr>
+    <tr><td>Crash reports (what went wrong and where in the app’s code, the app version and update, the phone model and operating system, and which screen was open)</td><td>To find and fix crashes</td><td>Sentry, our crash-reporting service. They don’t include your email, your account, your logs or any device identifier.</td></tr>
+    <tr><td>Form scans you send with Scan my forms (optional). These show what’s printed on your forms, including your name, office and route.</td><td>To read the numbers off your 4241-M and 4241-A</td><td>Sent through our backend to Anthropic, which reads the numbers. We don’t keep the images. Anthropic normally deletes them within 30 days and doesn’t use them to train its models.</td></tr>
     <tr><td>Evaluation PDF or image files you upload</td><td>To read the numbers off your forms</td><td><strong>Only on your device.</strong> The files are read on your phone and are not uploaded to us.</td></tr>
     <tr><td>Reminder preferences</td><td>To schedule your daily reminder and monthly summary notice</td><td>Only on your device. Notifications are scheduled locally; we do not use push notification services.</td></tr>
   </table>
-  <p>We do not collect your location, contacts, advertising identifiers, or usage analytics. The app can only open a photo or file that you choose to upload.</p>
+  <p>We do not collect your location, contacts, advertising identifiers, or usage analytics. The app can only open a photo or file that you choose to upload, or the pages you scan with Scan my forms.</p>
 
   <h2>How we use your information</h2>
   <ul>
     <li>To provide the app’s features: storing your logs, syncing them between your devices, and showing your results.</li>
     <li>To send account emails you ask for, such as sign-up confirmation codes and password-reset codes.</li>
+    <li>To read the numbers off your forms when you use Scan my forms.</li>
+    <li>To find and fix crashes, using crash reports.</li>
     <li>To respond to you if you contact us.</li>
   </ul>
   <p>We do not use your information for advertising, and we do not sell or rent it to anyone.</p>
@@ -66,16 +72,19 @@
   <ul>
     <li><strong>Supabase</strong> hosts our database and account sign-in. Your account data is protected so that only your signed-in account can read or change it.</li>
     <li><strong>Google (Gmail)</strong> delivers account emails such as confirmation and password-reset codes, so it receives your email address and the message content.</li>
+    <li><strong>Anthropic</strong> reads the form scans you send with Scan my forms so the app can fill in your numbers. We don’t keep the images; Anthropic normally deletes them within 30 days and doesn’t use them to train its models.</li>
+    <li><strong>Google’s document scanner</strong> (part of Google Play services on Android) takes the pictures when you use Scan my forms. The pages are scanned on your phone, and we send them to Anthropic, not to Google. The scanner sends Google its own usage data for diagnostics and analytics, such as your phone’s model and operating system, the app’s version, a device identifier and error codes.</li>
+    <li><strong>Sentry</strong> receives crash reports when the app hits an error, so we can fix it. Reports don’t include your email, account, logs or device identifiers, and we’ve told Sentry not to store IP addresses.</li>
   </ul>
   <p>We may disclose information if required by law, or to protect the rights and safety of our users or others.</p>
 
   <h2 id="delete">Deleting your Rural Route Tracker account and data</h2>
   <p>We keep your account data for as long as you have an account. You can delete it at any time:</p>
   <ul>
-    <li>In the app, go to <strong>Settings → Delete my account</strong>. This permanently deletes your login, your evaluation details and every day you have logged from our backend, and removes the app’s copy from that device.</li>
+    <li>In the app, go to <strong>Settings → Delete my account</strong>. This permanently deletes your login, your evaluation details, every day you have logged, the record of days you deleted and the record of form scans you sent from our backend, and removes the app’s copy from that device.</li>
     <li>Or email us at <a href="mailto:rural.route.tracker@gmail.com">rural.route.tracker@gmail.com</a> from your account’s email address and we will delete it for you.</li>
   </ul>
-  <p>Deleting removes your account, your evaluation details and all of your logged days. We don’t keep a copy afterward. Emails you sent us stay in our inbox unless you ask us to delete them too.</p>
+  <p>Deleting removes your account, your evaluation details, all of your logged days, the record of days you deleted and the record of form scans you sent. We don’t keep a copy afterward. Emails you sent us stay in our inbox unless you ask us to delete them too. Crash reports aren’t linked to your account, so they aren’t part of it; Sentry deletes them automatically after a limited time.</p>
   <p>Deletion cannot be undone. You can export your logs as a CSV file from <strong>Settings → Your logs</strong> before deleting.</p>
 
   <h2>Security</h2>
